@@ -1,0 +1,10 @@
+@host = http://localhost:5000
+
+### 1. Login as an admin
+POST {{host}}/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "admin@feedpulse.com",
+  "password": "admin123"
+}
