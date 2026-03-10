@@ -8,3 +8,15 @@ Content-Type: application/json
   "email": "admin@feedpulse.com",
   "password": "admin123"
 }
+
+### 2. Insert data into the database
+POST {{host}}/api/feedbacks
+Content-Type: application/json
+
+{
+ "title": "Feature Request: Dark Mode",
+ "description": "Please add a dark mode option to the application. It would make the interface easier to use at night.",
+ "category": "Feature Request",
+ "submitterName": "John Doe",
+ "submitterEmail": "john@example.com"
+}
