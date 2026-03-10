@@ -21,7 +21,7 @@ app.use(cors({
 app.use(express.json());
 
 app.use("/api/auth", authRouter);
-app.use("/api/feedback", feedbackRouter);
+app.use("/api/feedbacks", feedbackRouter);
 
 connectDB().then(() => {
     app.listen(PORT, () => {
