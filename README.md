@@ -92,9 +92,11 @@ All environment variables are loaded in `backend/src/config/env.ts`:
   ```md
   ![Admin dashboard page](./screenshots/admin_dashboard.png)
   ```
+**Future implements**
+- Create a completed authentication system with proper user management
 
 **Bug**
-Tailwind CSS is not configured properly. So, styles did not appear in frontend
+Tailwind CSS is not configured properly. So, styles did not appear in the frontend
 
 
 
