@@ -1,6 +1,6 @@
 @host = http://localhost:5000
 
-### 1. Login as an admin
+### login
 POST {{host}}/api/auth/login
 Content-Type: application/json
 
@@ -8,15 +8,39 @@ Content-Type: application/json
   "email": "admin@feedpulse.com",
   "password": "admin123"
 }
+### Paste token here after login
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbkBmZWVkcHVsc2UuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzczMjI0NTE2LCJleHAiOjE3NzMyMjgxMTZ9.mTR8MJ2_uGDg4_2bYQ9I-DF0K6prwnuXw30l_O6inCY
 
-### 2. Insert data into the database
-POST {{host}}/api/feedbacks
+### Insert feedback
+POST {{host}}/api/feedback
 Content-Type: application/json
+Authorization: Bearer {{token}}
+
+  {
+  "title": "Dark mode needed",
+  "description": "The dashboard is too bright at night. Please add dark mode support.",
+  "category": "Feature Request",
+  "submitterName": "John",
+  "submitterEmail": "john@gmail.com"
+}
+
+### get_all_feedbacks
+GET {{host}}/api/admin/feedback
+Authorization: Bearer {{token}}
+
+### get_feedback_by_id
+GET {{host}}/api/admin/feedback/69b0480e988161e965b73d04
+Authorization: Bearer {{token}}
+
+### update_feedback_status
+PATCH {{host}}/api/admin/feedback/69b0480e988161e965b73d04/status
+Content-Type: application/json
+Authorization: Bearer {{token}}
 
 {
-  "title": "Feature Request: Dark Mode",
-  "description": "Please add a dark mode option to the application. It would be easier on the eyes, especially at night.",
-  "category": "Feature Request",
-  "submitterName": "John Doe",
-  "submitterEmail": "john.doe@example.com"
+  "status": "resolved"
 }
+
+### delete_feedback
+DELETE {{host}}/api/admin/feedback/69b06ef187b4f8e1261d48e1
+Authorization: Bearer {{token}}

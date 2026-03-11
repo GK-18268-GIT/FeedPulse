@@ -1,9 +1,5 @@
-import FeedbackForm from "../components/FeedbackForm";
+import Home from "./home";
 
-export default function FeedbackPage() {
-  return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-      <FeedbackForm />
-    </div>
-  );
+export default function Page() {
+  return <Home />;
 }
