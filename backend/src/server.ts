@@ -6,6 +6,7 @@ import { ENV } from "./config/env";
 import authRouter from "./routes/auth.router";
 import feedbackRouter from "./routes/feedback.router";
 import { connectDB } from "./utils/db";
+import adminRouter from "./routes/admin.router";
 
 const __direname = path.resolve();
 
@@ -22,6 +23,7 @@ app.use(express.json());
 
 app.use("/api/auth", authRouter);
 app.use("/api/feedbacks", feedbackRouter);
+app.use("/api/admin", adminRouter);
 
 connectDB().then(() => {
     app.listen(PORT, () => {

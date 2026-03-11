@@ -23,6 +23,12 @@ export interface IFeedback extends Document {
 
 const FeedbackSchema: Schema = new Schema(
     {
+        id: {
+            type: Number,
+            unique: true,
+
+        },
+
         title: {
             type: String,
             required: true,
