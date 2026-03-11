@@ -93,7 +93,8 @@ All environment variables are loaded in `backend/src/config/env.ts`:
   ![Admin dashboard page](./screenshots/admin_dashboard.png)
   ```
 
-
+**Bug**
+Tailwind CSS is not configured properly. So, styles did not appear in frontend
 
 
 
