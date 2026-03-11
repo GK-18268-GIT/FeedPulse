@@ -1,0 +1,220 @@
+/* ─── Login Page ─────────────────────────────────────────────── */
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3f4f6;
+  padding: 1rem;
+}
+
+.login-card {
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+              0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  width: 100%;
+  max-width: 28rem;
+}
+
+.login-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* ─── Alerts / Errors ────────────────────────────────────────── */
+
+.alert-error {
+  margin-bottom: 1rem;
+  border-radius: 0.25rem;
+  border: 1px solid #fecaca;
+  background-color: #fef2f2;
+  padding: 0.75rem;
+  font-size: 0.875rem;
+  color: #991b1b;
+}
+
+/* ─── Form ───────────────────────────────────────────────────── */
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group:last-of-type {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.25rem;
+}
+
+.form-input {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.15s ease;
+}
+
+.form-input:focus {
+  border-color: #3b82f6;
+}
+
+/* ─── Buttons ────────────────────────────────────────────────── */
+
+.btn {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: background-color 0.15s ease;
+}
+
+.btn-primary {
+  width: 100%;
+  background-color: #2563eb;
+  color: #ffffff;
+  padding: 0.5rem;
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+}
+
+.btn-primary:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.btn-danger {
+  background-color: #dc2626;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+}
+
+.btn-danger:hover {
+  background-color: #b91c1c;
+}
+
+.btn-blue {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+
+.btn-red {
+  background-color: #ef4444;
+  color: #ffffff;
+}
+
+/* ─── Dashboard Layout ───────────────────────────────────────── */
+
+.dashboard {
+  padding: 2.5rem;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.dashboard-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+}
+
+/* ─── Filters ────────────────────────────────────────────────── */
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.filter-input,
+.filter-select {
+  border: 1px solid #d1d5db;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  outline: none;
+  font-size: 0.875rem;
+  background-color: #ffffff;
+  transition: border-color 0.15s ease;
+}
+
+.filter-input:focus,
+.filter-select:focus {
+  border-color: #3b82f6;
+}
+
+/* ─── Feedback Grid ──────────────────────────────────────────── */
+
+.feedback-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .feedback-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ─── Feedback Card ──────────────────────────────────────────── */
+
+.feedback-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease;
+}
+
+.feedback-card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+              0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.feedback-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.feedback-card-description {
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+.feedback-card-meta {
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.feedback-card-meta:last-of-type {
+  margin-bottom: 1rem;
+}
+
+.feedback-card-meta span {
+  font-weight: 600;
+}
+
+.feedback-card-actions {
+  display: flex;
+  gap: 0.75rem;
+}

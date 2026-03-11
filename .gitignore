@@ -4,6 +4,3 @@ node_modules
 # Local environment variables
 .env
 \dist
-
-# VS Code REST Client file
-\request.http
